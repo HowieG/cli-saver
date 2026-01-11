@@ -1,0 +1,28 @@
+[project]
+name = "cli-saver"
+version = "0.1.0"
+description = "CLI tool that finds discount codes when you install packages"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+payments = [
+    "nevermined-payments>=0.1.0",
+]
+
+[project.scripts]
+cli-saver = "cli_saver.cli:main"
+cli-saver-deals = "cli_saver_deals_agent.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cli_saver*", "cli_saver_deals_agent*"]

@@ -1,0 +1,6 @@
+click>=8.0
+rich>=13.0
+requests>=2.28
+
+[payments]
+nevermined-payments>=0.1.0

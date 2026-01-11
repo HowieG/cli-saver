@@ -1,0 +1,3 @@
+[console_scripts]
+cli-saver = cli_saver.cli:main
+cli-saver-deals = cli_saver_deals_agent.cli:main
